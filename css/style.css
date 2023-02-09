@@ -1091,7 +1091,7 @@ img{
 
 .list-style-five li{
 	position:relative;
-	color:#1a1e66;
+	color:#000000;
 	font-size:18px;
 	font-weight:400;
 	margin-bottom:15px;
@@ -1103,7 +1103,7 @@ img{
 	position:absolute;
 	left:0px;
 	top:0px;
-	color:#2f3df6;
+	color:#83072D;
 	font-size:16px;
 }
 
@@ -1127,7 +1127,7 @@ img{
 	position:absolute;
 	left:0px;
 	top:2px;
-	color:#4bb1ff;
+	color:#83072D;
 	font-size:25px;
 }
 
@@ -3914,7 +3914,7 @@ img{
 	width:142px;
 	height:142px;
 	margin:0 auto;
-	border-radius:50%;
+	border-radius:37%;
 	margin-left:-71px;
 	overflow:hidden;
 	margin-bottom:20px;
@@ -11758,14 +11758,14 @@ img{
 
 .contact-page-section .inner-container h2{
 	position:relative;
-	color:#012068;
+	color:#000000;
 	font-weight:700;
 	line-height:1.4em;
 }
 
 .contact-page-section .inner-container h2 span{
 	font-style:italic;
-	color:#3241ff;
+	color:#83072D;
 	font-family: 'Playfair Display', serif;
 }
 
@@ -11779,7 +11779,7 @@ img{
 
 .contact-page-section .info-column .inner-column .text{
 	position:relative;
-	color:#1a1e66;
+	color:#000000;
 	font-size:16px;
 	line-height:1.7em;
 	margin-top:25px;
