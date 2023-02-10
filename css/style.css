@@ -8302,7 +8302,7 @@ img{
 	border:1px solid #d9d9d9;
 	padding:29px 30px 29px 40px;
 	transition:all 500ms ease;
-	text-transform:capitalize;
+	/*text-transform:capitalize;*/
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -8335,7 +8335,7 @@ img{
 	line-height:1.8em;
 	margin-top:8px;
 	transition:all 500ms ease;
-	text-transform:capitalize;
+	/*text-transform:capitalize;*/
 	font-family: 'Poppins', sans-serif;
 }
 
