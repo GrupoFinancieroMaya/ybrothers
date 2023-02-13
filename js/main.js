@@ -227,10 +227,9 @@
 	//====================================================================//
 	//
 	if($('.tabs-box').length){
-		$('.tabs-box .tab-buttons .tab-btn').on('click', function(e) {
+		$(document).on('click','.tabs-box .tab-buttons .tab-btn', function(e) {
 			e.preventDefault();
 			var target = $($(this).attr('data-tab'));
-			
 			if ($(target).is(':visible')){
 				return false;
 			}else{
