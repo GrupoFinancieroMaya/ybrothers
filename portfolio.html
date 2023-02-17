@@ -519,6 +519,7 @@
 				var rendAnual = 0;
 				var renta = 0;
 				var sumaPorcentual = 0;
+				var capmasinv = 0;
 				for(let a=1; a<=12; a++){
 					//console.log(`Mes ${a}`)
 					//console.log(`Capital Inicial ${numero}`)
@@ -532,7 +533,9 @@
 							break;
 					}
 					if(modalidad == 'anual'){
-						var capmasinv=numero+rendAnual
+						 capmasinv = numero + rendAnual
+					}else{
+						 capmasinv = numero
 					}
 					//console.log(`capital + rendimiento ${capmasinv}`)
 					let ren = (capmasinv * redimeinto)/100;
@@ -563,6 +566,7 @@
 				}else{
 					sumaPorcentual = numeral(sumaPorcentual)
 				}
+				console.log(sumaPorcentual)
 				var informacion = `<div class="content">
 										<div class="row">
 											<div class="col-md-12"> 
@@ -579,7 +583,7 @@
 											</div>
 											<div class="col-md-12"> 
 												<span class="title">Porcentaje rendimiento anual</span>
-												<sàn class="title">${sumaPorcentual}%</span>
+												<sàn class="title">${sumaPorcentual.value().toFixed(1)}%</span>
 											</div>
 										</div>
 									</div>`
