@@ -11917,3 +11917,15 @@ img{
 	line-height:1.3em;
 	margin-bottom:20px;
 }
+
+.modal-lx{
+	max-width: 1000px;
+}
+
+.modal-img {
+	width: 200px;
+}
+
+.calc-accoridon{
+	height: 70px !important;
+}
