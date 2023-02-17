@@ -11929,3 +11929,20 @@ img{
 .calc-accoridon{
 	height: 70px !important;
 }
+
+.decoration{
+	text-decoration: none;
+}
+
+.calcu {
+	text-decoration: none !important;
+	color:#000000;
+}
+
+.calcu:hover{
+	color:#000000
+}
+
+.calcu strong {
+	color:#83072d
+}
