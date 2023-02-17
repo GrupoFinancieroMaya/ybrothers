@@ -11946,3 +11946,20 @@ img{
 .calcu strong {
 	color:#83072d
 }
+
+.radios {
+	accent-color: auto;
+	display: block;
+	width: 20px;
+	height: 20px;
+  }
+
+  .radio-label{
+	font-size: 20px;
+	font-weight: 800;
+	color:#000000;
+  }
+  
+  input.custom {
+	accent-color: #83072d;
+  }

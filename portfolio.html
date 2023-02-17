@@ -280,13 +280,14 @@
 
 						<div class="modal-body">
 							<div class="container">
-								<div class="accordion" id="calculadora">
+								<div class="accordion" id="calculadora" style="display:none;">
 									<div class="card">
 										<div class="card-header p-0 calc-accoridon" id="selecciona_plan">
 											<div class="sec-title mb-2 ">
 												<h2>
-													<button class="btn btn-link calcu" type="button" data-toggle="collapse"
-														data-target="#plan" aria-expanded="true" aria-controls="plan">
+													<button class="btn btn-link calcu" type="button"
+														data-toggle="collapse" data-target="#plan" aria-expanded="true"
+														aria-controls="plan">
 														<strong>Paso 1:</strong> Plan de Inversi&oacute;n
 													</button>
 												</h2>
@@ -301,11 +302,11 @@
 															<img class="rounded mx-auto d-block modal-img"
 																src="images/calculadora/conservador.png"
 																alt="plan conservador">
-															<div class="form-check form-check-inline">
-																<input class="form-check-input" type="radio"
-																	name="planes" id="planes" value="conservador"
-																	checked>
-																<label class="form-check-label"
+															<div class="form-check pt-2 form-check-inline">
+																<input class="form-check-input radios custom"
+																	type="radio" name="planes" id="planes"
+																	value="conservador" checked>
+																<label class="form-check-label radio-label"
 																	for="inlineCheckbox1">Conservador</label>
 															</div>
 														</div>
@@ -313,10 +314,11 @@
 															<img class="rounded mx-auto d-block modal-img"
 																src="images/calculadora/agresivo.png"
 																alt="plan agresivo">
-															<div class="form-check form-check-inline">
-																<input class="form-check-input" name="planes"
-																	type="radio" id="planes" value="agresivo">
-																<label class="form-check-label"
+															<div class="form-check pt-2 form-check-inline">
+																<input class="form-check-input radios custom"
+																	name="planes" type="radio" id="planes"
+																	value="agresivo">
+																<label class="form-check-label radio-label"
 																	for="inlineCheckbox2">Agresivo</label>
 															</div>
 														</div>
@@ -347,11 +349,11 @@
 															<img class="rounded mx-auto d-block modal-img"
 																src="images/calculadora/mensual.png"
 																alt="plan conservador">
-															<div class="form-check form-check-inline">
-																<input class="form-check-input" type="radio"
-																	name="radioinline" id="radioinline" value="mensual"
-																	checked>
-																<label class="form-check-label"
+															<div class="form-check pt-2 form-check-inline">
+																<input class="form-check-input radios custom"
+																	type="radio" name="radioinline" id="radioinline"
+																	value="mensual" checked>
+																<label class="form-check-label radio-label"
 																	for="inlineCheckbox1">Mensual</label>
 															</div>
 														</div>
@@ -359,10 +361,11 @@
 															<img class="rounded mx-auto d-block modal-img"
 																src="images/calculadora/anual.png"
 																alt="plan conservador">
-															<div class="form-check form-check-inline">
-																<input class="form-check-input" name="radioinline"
-																	type="radio" id="radioinline" value="anual">
-																<label class="form-check-label"
+															<div class="form-check pt-2 form-check-inline">
+																<input class="form-check-input radios custom"
+																	name="radioinline" type="radio" id="radioinline"
+																	value="anual">
+																<label class="form-check-label radio-label"
 																	for="inlineCheckbox2">Anual</label>
 															</div>
 														</div>
@@ -389,8 +392,11 @@
 											<div class="card-body">
 												<div class="container-fluid">
 													<div class="row ">
-														<div class="col-md-6 text-center">
-															<div class="input-group mb-3">
+														<div class="col-md-5 offset-md-3 text-center">
+															<img class="rounded mx-auto d-block modal-img"
+																src="images/calculadora/inversion.png"
+																alt="plan conservador">
+															<div class="input-group pt-3 mb-3">
 																<div class="input-group-prepend">
 																	<span class="input-group-text"
 																		id="basic-addon3">$</span>
@@ -406,8 +412,22 @@
 									</div>
 								</div>
 							</div>
-							<div class="container pt-3" id="ejemploCorrida" style="display:none;">
+							<div class="container" id="ejemploCorrida">
 								<div class="row ">
+									<div class="col-md-4">
+										<h6>Porcentaje de rendimiento anual</h6>
+										<canvas id="myChart"></canvas>
+									</div>
+									<div class="col-md-3">
+										<h4>Resumen</h4>
+										<h6>Capital inicial </h6>
+										$ 400,000
+										<h6>Rendimientos acumulados</h6>
+										$ 400,000
+										<h6>Capital final </h6>
+										$ 400,000
+									</div>
+									<div class="col-md-4"></div>
 									<div class="col pt-2">
 										<div class="table-responsive">
 											<table class="table table-bordered">
@@ -432,14 +452,14 @@
 											</table>
 										</div>
 									</div>
-
 								</div>
 							</div>
 						</div>
 						<div class="modal-footer">
 							<button type="button" style="display:none;" id="configura" class="btn btn-success">Nuevo
 								plan</button>
-							<button type="button" id="corrida" class="btn btn-primary">Ver Inversi&oacute;n</button>
+							<button type="button" id="corrida" style="background-color: #83072d; color:#ffffff"
+								class="btn">Ver Inversi&oacute;n</button>
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 						</div>
 					</div>
@@ -479,6 +499,7 @@
 	</div>
 	<!--End pagewrapper-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="js/jquery.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -493,15 +514,6 @@
 	<script>
 		$(document).ready(() => {
 			$("#investment").val("400,000")
-			/*$("#investment").keypress(function(){
-				let number = $(this).val();
-				console.log(number)
-				const myNumeral = numeral(number);
-				console.log(myNumeral.value())				
-				const currencyString = currencyFormatter({ currency: "USD", value:myNumeral.value()});
-				console.log(currencyString);
-				$(this).val(currencyString);
-			});*/
 			$("#corrida").click(function () {
 				const myNumeral = numeral($("#investment").val());
 				const plan = $('input:radio[name=planes]:checked').val()
@@ -511,6 +523,7 @@
 				$("#calculadora").hide()
 				$("#configura").show()
 				$("#ejemploCorrida").show()
+				$("#corrida").hide();
 				var body = '';//rendimientos entre 12 1+rendimientoselevado a la 12 -1
 				var cuenta = 1;
 				var rendAnual = 0;
@@ -518,8 +531,6 @@
 				var sumaPorcentual = 0;
 				var capmasinv = 0;
 				for (let a = 1; a <= 12; a++) {
-					//console.log(`Mes ${a}`)
-					//console.log(`Capital Inicial ${numero}`)
 					var rendimeinto = 0;
 					switch (plan) {
 						case "agresivo":
@@ -534,9 +545,7 @@
 					} else {
 						capmasinv = numero
 					}
-					//console.log(`capital + rendimiento ${capmasinv}`)
 					let ren = (capmasinv * redimeinto) / 100;
-					//console.log(`rendimiento del mes ${ren.toFixed(2)}`)
 					let redimientos = numeral(ren).format('0,0.00');
 					renta += ren
 					body += `<tr>
@@ -551,7 +560,6 @@
 					if (modalidad == 'anual') {
 						rendAnual += ren
 					}
-					//console.log(`rendimiento acumulado ${rendAnual.toFixed(2)}`)
 				}
 				var rentaFormat = numeral(renta)
 				let capfinal = numeral((numero + renta))
@@ -564,7 +572,6 @@
 					sumaPorcentual = numeral(sumaPorcentual)
 
 				}
-				console.log(sumaPorcentual)
 				var informacion = `<div class="content">
 										<div class="row">
 											<div class="col-md-12"> 
@@ -593,8 +600,28 @@
 				$("#calculadora").show()
 				$("#configura").hide()
 				$("#ejemploCorrida").hide()
+				$("#corrida").show();
 
 			})
+
+
+			const ctx = $("#myChart");
+			new Chart(ctx, {
+				type: 'doughnut',
+				data: {
+					labels: ['Red', 'Blue',],
+					datasets: [{
+						label: '# of Votes',
+						data: [19, 12,],
+						borderWidth: 1,
+						backgroundColor: [
+							'rgb(131, 7, 45)',
+							'rgb(130, 7, 44)',
+						],
+					}]
+				},
+			});
+
 		});
 		function aleatorio(minimo, maximo, decimales) {
 			var precision = Math.pow(10, decimales);
