@@ -11963,3 +11963,33 @@ img{
   input.custom {
 	accent-color: #83072d;
   }
+
+  .tTitle{
+	color: #83072d;
+	font-weight: 700;
+  }
+  .tResult{
+	font-weight: 800;
+	font-size: 16px;
+  }
+  
+  .tcolorhead{
+	background-color:#83072d;
+	color:#ffffff;
+	font-weight: 800;
+	font-size: 15px;
+  }
+
+  .tableC tbody tr td{
+	border:1px solid #83072d
+  }
+
+  .tableC td, .tableC th{
+	padding: 0px;
+  }
+
+  .tableC tbody{	
+	font-weight: 800;
+	font-size: 15px;
+	color:#000000;
+  }
