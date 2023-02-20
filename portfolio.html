@@ -415,9 +415,8 @@
 							<div class="container-fluid" id="ejemploCorrida" style="display:none;">
 								<div class="row ">
 									<div class="col-md-3 text-center">
-										<div class="chart-container"
-											style="position: relative; height:20vh; width:50vw">
-											<canvas id="pay"></canvas>
+										<div class="chart-container">
+											<canvas id="pay" style="position: relative; height:30vh; width:50vw"></canvas>
 										</div>
 									</div>
 									<div class="col-md-3">
@@ -603,11 +602,9 @@
 					sumaPorcentual = numeral(sumaPorcentual)
 
 				}
-
 				$("#cinicial").html(`$ ${$("#investment").val()}`)
 				$("#rendimientoT").html(rentaFormat.format('$0,0'))
 				$("#cfinal").html(capfinal.format('$0,0'))
-
 				grafica1.push(renta)
 				/*var informacion = `<div class="content">
 										<div class="row">
@@ -655,6 +652,8 @@
 					},
 
 					options: {
+						//responsive:true,
+						maintainAspectRatio: false,
 						plugins: {
 							title: {
 								display: true,
@@ -684,7 +683,7 @@
 				};
 
 				var option = {
-					responsive: true,
+					maintainAspectRatio: false,
 					scales: {
 						y: {
 							stacked: true,
@@ -710,7 +709,6 @@
 						}
 					}
 				};
-console.log(grafica1)
 				new Chart(barra, {
 					type: 'bar',
 					options: option,
@@ -731,7 +729,7 @@ console.log(grafica1)
 				};
 
 				var optionline = {
-					responsive: true,
+					maintainAspectRatio: false,
 					scales: {
 						y: {
 							stacked: true,
