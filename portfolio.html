@@ -416,7 +416,7 @@
 								<div class="row ">
 									<div class="col-md-3 text-center">
 										<div class="chart-container"
-											style="position: relative; height:30vh; width:60vw">
+											style="position: relative; height:20vh; width:50vw">
 											<canvas id="pay"></canvas>
 										</div>
 									</div>
@@ -580,7 +580,7 @@
 					let redimientos = numeral(ren).format('0,0.00');
 					renta += ren
 					body += `<tr>
-									${a == 1 ? "<td>Capital Inicial</td>" : (a == 2) ? '<td colspan="2" rowspan="11" id="info" style=" background-color: black;width:100px;"></td>' : ''}
+									${a == 1 ? "<td>Capital Inicial</td>" : (a == 2) ? '<td colspan="2" rowspan="11" id="info" style="width:100px;"></td>' : ''}
 									${a == 1 ? '<td>$' + formato + '</td>' : ''}
 									<td>Mes ${a}</td>
 									<td>$ ${redimientos}</td>
@@ -631,7 +631,7 @@
 									</div>`*/
 
 					var informacion = ` <div class="logo">
-										<img src="images/icons/widget-logo.png" alt="YBCapital">
+										<img src="images/logo-negro.png" alt="YBCapital">
 									</div>`
 				$("#body").html(body)
 				$("#info").html(informacion)
@@ -710,7 +710,7 @@
 						}
 					}
 				};
-
+console.log(grafica1)
 				new Chart(barra, {
 					type: 'bar',
 					options: option,
