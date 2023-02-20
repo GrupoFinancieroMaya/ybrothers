@@ -416,7 +416,8 @@
 								<div class="row ">
 									<div class="col-md-3 text-center">
 										<div class="chart-container">
-											<canvas id="pay" style="position: relative; height:30vh; width:50vw"></canvas>
+											<canvas id="dona"
+												style=" height:30vh; width:50vw"></canvas>
 										</div>
 									</div>
 									<div class="col-md-3">
@@ -502,7 +503,8 @@
 
 						<!-- Copyright Column -->
 						<div class="copyright-column col-lg-6 col-md-6 col-sm-12">
-							<div class="copyright">2023 &copy; Todos los derechos reservados <a href="#">Yman Brothers Capital</a></div>
+							<div class="copyright">2023 &copy; Todos los derechos reservados <a href="#">Yman Brothers
+									Capital</a></div>
 						</div>
 
 						<!-- Social Column -->
@@ -539,8 +541,15 @@
 	<script src="js/main.js"></script>
 	<script>
 		$(document).ready(() => {
+			const dona = $("#dona");
+			const barra = $("#barra");
+			const linea = $("#linea");
+			var donas=''
+			var barras=''
+			var lineas=''
 			$("#investment").val("400,000")
 			$("#corrida").click(function () {
+				var pastel = []
 				const myNumeral = numeral($("#investment").val());
 				const plan = $('input:radio[name=planes]:checked').val()
 				const modalidad = $('input:radio[name=radioinline]:checked').val()
@@ -558,6 +567,8 @@
 				var capmasinv = 0;
 				var arrRendimiento = [];
 				var grafica1 = [];
+
+
 				grafica1.push(numero);
 				for (let a = 1; a <= 12; a++) {
 					var rendimeinto = 0;
@@ -602,6 +613,7 @@
 					sumaPorcentual = numeral(sumaPorcentual)
 
 				}
+				console.log(sumaPorcentual)
 				$("#cinicial").html(`$ ${$("#investment").val()}`)
 				$("#rendimientoT").html(rentaFormat.format('$0,0'))
 				$("#cfinal").html(capfinal.format('$0,0'))
@@ -627,18 +639,16 @@
 										</div>
 									</div>`*/
 
-					var informacion = ` <div class="logo">
+				var informacion = ` <div class="logo">
 										<img src="images/logo-negro.png" alt="YBCapital">
 									</div>`
 				$("#body").html(body)
 				$("#info").html(informacion)
 
-				var pastel = [100]
+				pastel.push(100)
 				pastel.push(sumaPorcentual.value().toFixed(1));
-				const pay = $("#pay");
-				const barra = $("#barra");
-				const linea = $("#linea");
-				new Chart(pay, {
+
+				var datapay = {
 					type: 'doughnut',
 					data: {
 						datasets: [{
@@ -652,7 +662,6 @@
 					},
 
 					options: {
-						//responsive:true,
 						maintainAspectRatio: false,
 						plugins: {
 							title: {
@@ -667,7 +676,7 @@
 						}
 					}
 				}
-				);
+				donas= new Chart(dona, datapay);
 
 				var data = {
 					labels: ["Capital", "Rendimiento"],
@@ -709,7 +718,7 @@
 						}
 					}
 				};
-				new Chart(barra, {
+				barras = new Chart(barra, {
 					type: 'bar',
 					options: option,
 					data: data
@@ -756,7 +765,7 @@
 					}
 				};
 
-				new Chart(linea, {
+				lineas =new Chart(linea, {
 					type: 'bar',
 					options: optionline,
 					data: dataline
@@ -769,7 +778,9 @@
 				$("#configura").hide()
 				$("#ejemploCorrida").hide()
 				$("#corrida").show();
-
+				donas.destroy();
+				barras.destroy();
+				lineas.destroy();
 			})
 
 
