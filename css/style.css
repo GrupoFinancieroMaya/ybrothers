@@ -4681,15 +4681,15 @@ img{
 	background-color: #000000;
 }
 
-.main-footer:before{
+/*.main-footer:before{
 	position:absolute;
 	content:'';
 	left:0px;
 	bottom:0px;
 	width:543px;
 	height:368px;
-	/*background:url(../images/icons/footer-pattern-2.png) no-repeat;*/
-}
+	background:url(../images/icons/footer-pattern-2.png) no-repeat;
+}*/
 
 .main-footer:after{
 	position:absolute;
