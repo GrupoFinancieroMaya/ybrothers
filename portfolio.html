@@ -193,7 +193,7 @@
 
 						<!-- Project Block -->
 						<div class="project-block mix agresivo col-lg-6 col-md-6 col-sm-12">
-							<div class="inner-box">
+							<div class="">
 								<div class="image">
 									<img src="images/gallery/agresivo-mensual.jpg" alt="agresivo-mensual" />
 									<div class="overlay-box">
@@ -202,7 +202,7 @@
 									</div>
 								</div>
 								<div class="lower-content">
-									<h5><a href="portfolio-single.html">Portafolio Agresivo</a></h5>
+									<h5><a href="javascript:void(0)">Portafolio Agresivo</a></h5>
 									<div class="designation">Modalidad Mensual</div>
 								</div>
 							</div>
@@ -210,7 +210,7 @@
 
 						<!-- Project Block -->
 						<div class="project-block mix agresivo col-lg-6 col-md-6 col-sm-12">
-							<div class="inner-box">
+							<div class="">
 								<div class="image">
 									<img src="images/gallery/agresivo-anual.jpg" alt="" />
 									<div class="overlay-box">
@@ -219,7 +219,7 @@
 									</div>
 								</div>
 								<div class="lower-content">
-									<h5><a href="portfolio-single.html">Portafolio Agresivo</a></h5>
+									<h5><a href="javascript:void(0)">Portafolio Agresivo</a></h5>
 									<div class="designation">Modalidad Anual</div>
 								</div>
 							</div>
@@ -227,7 +227,7 @@
 
 						<!-- Project Block -->
 						<div class="project-block mix conservador col-lg-6 col-md-6 col-sm-12">
-							<div class="inner-box">
+							<div class="">
 								<div class="image">
 									<img src="images/gallery/conservador-mensual.jpg" alt="conservador-mesnual" />
 									<div class="overlay-box">
@@ -236,7 +236,7 @@
 									</div>
 								</div>
 								<div class="lower-content">
-									<h5><a href="portfolio-single.html">Portafolio Conservador</a></h5>
+									<h5><a href="javascript:void(0)">Portafolio Conservador</a></h5>
 									<div class="designation">Modalidad Mensual</div>
 								</div>
 							</div>
@@ -244,7 +244,7 @@
 
 						<!-- Project Block -->
 						<div class="project-block mix conservador col-lg-6 col-md-6 col-sm-12">
-							<div class="inner-box">
+							<div class="">
 								<div class="image">
 									<img src="images/gallery/conservador-anual.jpg" alt="conservador-anual" />
 									<div class="overlay-box">
@@ -253,7 +253,7 @@
 									</div>
 								</div>
 								<div class="lower-content">
-									<h5><a href="portfolio-single.html">Portafolio Conservador</a></h5>
+									<h5><a href="javascript:void(0)">Portafolio Conservador</a></h5>
 									<div class="designation">Modalidad Anual</div>
 								</div>
 							</div>
@@ -287,7 +287,7 @@
 												<h2>
 													<button class="btn btn-link calcu" type="button"
 														data-toggle="collapse" data-target="#plan" aria-expanded="true"
-														aria-controls="plan">
+														aria-controls="plan" id="btn_plan">
 														<strong>Paso 1:</strong> Plan de Inversi&oacute;n
 													</button>
 												</h2>
@@ -333,7 +333,7 @@
 												<h2>
 													<button class="btn btn-link collapsed calcu" type="button"
 														data-toggle="collapse" data-target="#modalidad"
-														aria-expanded="false" aria-controls="modalidad">
+														aria-expanded="false" aria-controls="modalidad" id="btn_modalidad">
 														<strong>Paso 2:
 														</strong> Modalidad de Inversi&oacute;n
 													</button>
@@ -380,7 +380,7 @@
 												<h2>
 													<button class="btn btn-link collapsed calcu" type="button"
 														data-toggle="collapse" data-target="#capital"
-														aria-expanded="false" aria-controls="capital">
+														aria-expanded="false" aria-controls="capital" id="btn_capital">
 														<strong>Paso 3:
 														</strong> Capital a invertir
 													</button>
@@ -483,7 +483,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" style="display:none;" id="configura" class="btn btn-success">Nuevo
+							<button type="button" style="display:none; background-color: #83072d; color:#ffffff" id="configura" class="btn btn-success">Nuevo
 								plan</button>
 							<button type="button" id="corrida" style="background-color: #83072d; color:#ffffff"
 								class="btn">Ver Inversi&oacute;n</button>
@@ -618,32 +618,10 @@
 					sumaPorcentual = numeral(sumaPorcentual)
 
 				}
-				console.log(sumaPorcentual)
 				$("#cinicial").html(`$ ${$("#investment").val()}`)
 				$("#rendimientoT").html(rentaFormat.format('$0,0'))
 				$("#cfinal").html(capfinal.format('$0,0'))
 				grafica1.push(renta)
-				/*var informacion = `<div class="content">
-										<div class="row">
-											<div class="col-md-12"> 
-												<span class="title">Capital Inicial</span>
-												<span class="title">$ ${$("#investment").val()}</span>
-											</div>
-											<div class="col-md-12"> 
-													<span class="title">Rendimientos Acumulados</span>
-													<span class="title">${rentaFormat.format('$0,0')}</span>
-											</div>
-											<div class="col-md-12"> 
-												<span class="title">Capital  Final</span>
-												<sàn class="title">${capfinal.format('$0,0')}</span>
-											</div>
-											<div class="col-md-12"> 
-												<span class="title">Porcentaje rendimiento anual</span>
-												<sàn class="title">${sumaPorcentual.value().toFixed(1)}%</span>
-											</div>
-										</div>
-									</div>`*/
-
 				var informacion = ` <div class="logo">
 										<img src="images/logo-negro.svg" alt="YBCapital">
 									</div>`
@@ -783,6 +761,13 @@
 				$("#configura").hide()
 				$("#ejemploCorrida").hide()
 				$("#corrida").show();
+				$("#btn_plan").removeClass("collapsed");
+				$("#plan").addClass("show");
+				$("#btn_modalidad").addClass("collapsed");
+				$("#modalidad").removeClass("show");
+				$("#btn_capital").addClass("collapsed");
+				$("#capital").removeClass("show");
+				$("#investment").val("400,000")
 				donas.destroy();
 				barras.destroy();
 				lineas.destroy();
