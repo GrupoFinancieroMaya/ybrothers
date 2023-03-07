@@ -548,6 +548,11 @@
 			var barras=''
 			var lineas=''
 			$("#investment").val("400,000")
+			$("#investment").keyup(function(e){
+				let numero = numeral($(this).val())
+				const formato = numero.format('0,0')
+				$(this).val(formato)
+			})
 			$("#corrida").click(function () {
 				var pastel = []
 				const myNumeral = numeral($("#investment").val());
