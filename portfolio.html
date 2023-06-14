@@ -87,9 +87,8 @@
 											<li><a href="testimonial.html">Testimonios</a></li>
 											</ul>
 										</li>
-										<li><a href="services.html">Servicios</a>
-										</li>
-										<li class="current"><a href="portfolio.html">Portafolio</a></li>
+										<li class="current"><a href="portfolio.html">Inversi&oacute;n</a></li>
+										<li><a href="services.html">Servicios</a></li>
 										<li><a target="_blank" href="https://www.fxblue.com/users/carlosjaimerz">Cuentas
 												auditadas</a></li>
 										<li><a href="contact.html">Cont&aacute;ctanos</a></li>
@@ -135,9 +134,8 @@
 											<li><a href="testimonial.html">Testimonios</a></li>
 										</ul>
 									</li>
-									<li><a href="services.html">Servicios</a>
-									</li>
-									<li class="current"><a href="portfolio.html">Portafolio</a></li>
+									<li class="current"><a href="portfolio.html">Inversi&oacute;n</a></li>
+									<li><a href="services.html">Servicios</a></li>
 									<li><a target="_blank" href="https://www.fxblue.com/users/carlosjaimerz">Cuentas
 											auditadas</a></li>
 									<li><a href="contact.html">Contact&aacute;nos</a></li>
@@ -187,7 +185,8 @@
 							<li class="active filter" data-role="button" data-filter="all">Todos</li>
 							<li class="filter" data-role="button" data-filter=".conservador">Conservador</li>
 							<li class="filter" data-role="button" data-filter=".agresivo">Agresivo</li>
-							<li> <a data-toggle="modal" data-target="#staticBackdrop">Calculadora</a></li>
+							<li class="filter" data-role="button" data-filter=".calculadora">Calculadora</li>
+							<!-- <a data-toggle="modal" data-target="#staticBackdrop">Calculadora</a>-->
 						</ul>
 
 					</div>
@@ -261,6 +260,224 @@
 								</div>
 							</div>
 						</div>
+
+						<!-- Project Block -->
+						<div class="project-block mix calculadora col-lg-12 col-md-12 col-sm-12 text-center">
+							<div class="sec-title pl-5 mb-0 centered">
+								<h2>Calculadora de rendiemientos para tu <span>inversi&oacute;n</span></h2>
+							</div>
+							<div class="container">
+								<div class="accordion" id="calculadora">
+									<div class="card">
+										<div class="card-header p-0 calc-accoridon" id="selecciona_plan">
+											<div class="sec-title mb-2 ">
+												<h2>
+													<button class="btn btn-link calcu" type="button"
+														data-toggle="collapse" data-target="#plan" aria-expanded="true"
+														aria-controls="plan" id="btn_plan">
+														<strong>Paso 1:</strong> Plan de Inversi&oacute;n
+													</button>
+												</h2>
+											</div>
+										</div>
+										<div id="plan" class="collapse show" aria-labelledby="selecciona_plan"
+											data-parent="#calculadora">
+											<div class="card-body">
+												<div class="container-fluid">
+													<div class="row ">
+														<div class="col-md-6 text-center">
+															<img class="rounded mx-auto d-block modal-img"
+																src="images/calculadora/conservador.png"
+																alt="plan conservador">
+															<div class="form-check pt-2 form-check-inline">
+																<input class="form-check-input radios custom"
+																	type="radio" name="planes" id="planes"
+																	value="conservador" checked>
+																<label class="form-check-label radio-label"
+																	for="inlineCheckbox1">Conservador</label>
+															</div>
+														</div>
+														<div class="col-md-6 text-center">
+															<img class="rounded mx-auto d-block modal-img"
+																src="images/calculadora/agresivo.png"
+																alt="plan agresivo">
+															<div class="form-check pt-2 form-check-inline">
+																<input class="form-check-input radios custom"
+																	name="planes" type="radio" id="planes"
+																	value="agresivo">
+																<label class="form-check-label radio-label"
+																	for="inlineCheckbox2">Agresivo</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-header p-0 calc-accoridon" id="selecciona_modalidad">
+											<div class="sec-title mb-2 ">
+												<h2>
+													<button class="btn btn-link collapsed calcu" type="button"
+														data-toggle="collapse" data-target="#modalidad"
+														aria-expanded="false" aria-controls="modalidad" id="btn_modalidad">
+														<strong>Paso 2:
+														</strong> Modalidad de Inversi&oacute;n
+													</button>
+												</h2>
+											</div>
+										</div>
+										<div id="modalidad" class="collapse" aria-labelledby="selecciona_modalidad"
+											data-parent="#calculadora">
+											<div class="card-body">
+												<div class="container-fluid">
+													<div class="row ">
+														<div class="col-md-6 text-center">
+															<img class="rounded mx-auto d-block modal-img"
+																src="images/calculadora/mensual.png"
+																alt="plan conservador">
+															<div class="form-check pt-2 form-check-inline">
+																<input class="form-check-input radios custom"
+																	type="radio" name="radioinline" id="radioinline"
+																	value="mensual" checked>
+																<label class="form-check-label radio-label"
+																	for="inlineCheckbox1">Mensual</label>
+															</div>
+														</div>
+														<div class="col-md-6 text-center">
+															<img class="rounded mx-auto d-block modal-img"
+																src="images/calculadora/anual.png"
+																alt="plan conservador">
+															<div class="form-check pt-2 form-check-inline">
+																<input class="form-check-input radios custom"
+																	name="radioinline" type="radio" id="radioinline"
+																	value="anual">
+																<label class="form-check-label radio-label"
+																	for="inlineCheckbox2">Anual</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-header p-0 calc-accoridon" id="ingresa_capital">
+											<div class="sec-title mb-2 ">
+												<h2>
+													<button class="btn btn-link collapsed calcu" type="button"
+														data-toggle="collapse" data-target="#capital"
+														aria-expanded="false" aria-controls="capital" id="btn_capital">
+														<strong>Paso 3:
+														</strong> Capital a invertir
+													</button>
+												</h2>
+											</div>
+										</div>
+										<div id="capital" class="collapse" aria-labelledby="ingresa_capital"
+											data-parent="#calculadora">
+											<div class="card-body">
+												<div class="container-fluid">
+													<div class="row ">
+														<div class="col-md-5 offset-md-3 text-center">
+															<img class="rounded mx-auto d-block modal-img"
+																src="images/calculadora/inversion.png"
+																alt="plan conservador">
+															<div class="input-group pt-3 mb-3">
+																<div class="input-group-prepend">
+																	<span class="input-group-text"
+																		id="basic-addon3">$</span>
+																</div>
+																<input type="text" class="form-control" id="investment"
+																	aria-describedby="basic-addon3">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="container-fluid" id="ejemploCorrida" style="display:none;">
+								<div class="row ">									
+									<div class="col-md-3 text-center">
+										<div class="chart-container">
+											<canvas id="dona"
+												style=" height:30vh; width:50vw"></canvas>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="row">
+											<div class="col-md-12 text-center">
+												<h4 style="font-weight: 700;">Resumen</h4>
+											</div>
+											<div class="col-md-12 pt-1">
+												<h6 class="tTitle">Capital inicial </h6>
+											</div>
+											<div class="col-md-12 pt-2">
+												<span class="tResult" id="cinicial"></span>
+											</div>
+											<div class="col-md-12 pt-1">
+												<h6 class="tTitle">Rendimiento total </h6>
+											</div>
+											<div class="col-md-12 pt-2">
+												<span class="tResult" id="rendimientoT"></span>
+											</div>
+											<div class="col-md-12 pt-1">
+												<h6 class="tTitle">Capital final </h6>
+											</div>
+											<div class="col-md-12 pt-2">
+												<span class="tResult" id="cfinal"></span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 text-center">
+										<div class="chart-container">
+											<canvas id="barra" style="height:30vh; width:15vw"></canvas>
+										</div>
+									</div>
+									<div class="col-md-3 text-center">
+										<div class="chart-container">
+											<canvas id="linea" style="height:30vh; width:15vw"></canvas>
+										</div>
+									</div>
+									<div class="col pt-2">
+										<div class="table-responsive">
+											<table class="table table-bordered tableC">
+												<thead class="tcolorhead">
+													<tr class="text-center">
+														<th colspan="2">Capital Inicial</th>
+														<th colspan="2">Rendimiento mensual</th>
+														<th colspan="2">Rendimientos</th>
+													</tr>
+													<tr class="text-center">
+														<th>Art&iacute;culo</th>
+														<th>Cantidad</th>
+														<th>Fecha de pago</th>
+														<th>Cantidad</th>
+														<th>Fecha</th>
+														<th>Porcentaje</th>
+													</tr>
+												</thead>
+												<tbody id="body" class="text-center">
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="col-md-12 ">
+										<strong>Nota:</strong> <span style="color:#83072d">Los rendimientos mostrados en pantalla son variables y depender&aacute;n del movimiento del mercado</span>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" style="display:none; background-color: #83072d; color:#ffffff" id="configura" class="btn btn-success">Nuevo
+									plan</button>
+								<button type="button" id="corrida" style="background-color: #83072d; color:#ffffff"
+									class="btn">Ver Inversi&oacute;n</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -268,7 +485,7 @@
 
 
 			<!-- Modal -->
-			<div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+			<!--<div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
 				aria-labelledby="staticBackdropLabel" aria-hidden="true">
 				<div class="modal-dialog modal-lx">
 					<div class="modal-content">
@@ -497,7 +714,11 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
+
+
+
+
 		</section>
 		<!-- End Case Section Three-->
 		<!--Main Footer-->
