@@ -2059,7 +2059,7 @@ img{
 
 .header-style-five.five-alternate .main-menu .navigation > li:hover > a,
 .header-style-five.five-alternate .main-menu .navigation > li.current > a{
-	color:#000000;
+	color:#ffffff;
 }
 
 .header-style-five.five-alternate .main-menu .navigation > li > ul{
@@ -2119,7 +2119,7 @@ img{
 }
 
 .header-style-five .main-menu .navigation > li > a{
-	color:#000000;
+	color:#ffffff;
 	padding:18px 0px;
 }
 
@@ -8832,7 +8832,7 @@ img{
 
 .page-title{
 	position:relative;
-	padding:90px 0px 90px;
+	padding:10px 0px 10px;
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-position:center center;
